@@ -134,14 +134,17 @@ body{
 .Insert:active{
   background-color: #f11d2f;
   transform: scale(0.97);
+  color: rgb(231, 231, 231);
 }
 .Pump:active{
   background-color: #ecd41c;
   transform: scale(0.97);
+  color: rgb(231, 231, 231);
 }
 .Finish:active{
   background-color: #a6d41d;
   transform: scale(0.97);
+  color: rgb(231, 231, 231);
 }
 .PumpInfo {
   background:linear-gradient( to bottom, #bcc6cc, #eee, #bcc6cc);
@@ -233,7 +236,7 @@ body{
   text-align: center;
   font-size: x-large;
   width: 30cap;
-  margin-top: 8%;
+  margin-top: 6%;
   grid-column: 1;
   position:absolute;
 }
@@ -281,4 +284,35 @@ body{
   height: 40px;
   margin: 3px;
   background-color: silver;
+}
+.receipt{
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
+  width: 40cap;
+}
+.l{
+  float: left;
+}
+.r{
+  float: right;
+}
+.dialog{
+  width: 380px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.receipt-button{
+  border-radius: 3px;
+  background-color: white;
+  color: black; 
+  border: 1px solid #ccc; 
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }

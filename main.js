@@ -11,6 +11,13 @@ syncprice = 0;
 pumpingprocess = "0";
 secret = "1234";
 pinin = "";
+let customerReceipt = {}
+let sel
+let finalAmoutWanted
+let bonusmessage
+let totalwithbonus
+let syncInterval
+let SelPrice
 
 document.getElementById("95").innerHTML = Price95;
 document.getElementById("98").innerHTML = Price98;
@@ -68,7 +75,7 @@ function pump() {
   if (pumped * SelPrice >= finalAmoutWanted) {
     document.getElementById("Finish").style.color = "#fcfbdc";
     pumpingprocess = "3";
-    document.getElementById("PumpInfo4").innerHTML = (finalAmoutWanted).toFixed(2)
+    document.getElementById("PumpInfo4").innerHTML = parseInt(finalAmoutWanted).toFixed(2)
   }
 }
 
@@ -118,7 +125,7 @@ function screen2() {
 function screen3() {
   gasselectable = "false";
   syncprice = 1;
-  setInterval(syncInnerHTML, 100);
+  syncInterval = setInterval(syncInnerHTML, 100);
   document.getElementById(
     "lansel"
   ).innerHTML = `For how much would you like to buy gas?<br>
@@ -137,6 +144,7 @@ function screen4() {
     <button onclick="credit()" class="buttons">Credit</button>
     <button onclick="debit()" class="buttons">Debit</button>
     `;
+    clearInterval(syncInterval)
 }
 
 function pinput() {
@@ -254,7 +262,9 @@ function cardreader() {
   } else if (crscan == "done") {
     document.getElementById("cr").style.backgroundImage =
       "url(gallery/CRE.png)";
-    document.getElementById("lansel").innerHTML = `Purchase complete`;
+      document.getElementById("lansel").innerHTML = `
+      Purchase sucessfull`
+      generateReceipt()
     document.getElementById("Insert").style.color = "#fcfbdc";
     pumpingprocess = "1";
   } else if (crscan == "creditpay") {
@@ -267,6 +277,7 @@ function cardreader() {
                  <button class="pinputbuttons" onclick="pinput(input='back')">⌫</button><button class="pinputbuttons" onclick="pinput(input='0')">0</button><button class="pinputbuttons" onclick="pinput(input='OK')">OK</button>
             
     `;
+    alert("The pincode is 1234")
   } else if (crscan == "creditbonus") {
     document.getElementById("cr").style.backgroundImage = "url(gallery/CR.png)";
     document.getElementById("lansel").innerHTML = `
@@ -284,4 +295,51 @@ function syncInnerHTML() {
     let litersWanted = document.getElementById("Literswanted");
     litersWanted.value = (amoutWanted.value / SelPrice).toFixed(3);
   }
+}
+
+function generateReceipt(){
+  const t = new Date();
+  customerReceipt = {
+    receipt: {
+      store: {
+        name: "TS1 Gas Station",
+        address: "1600 Pennsylvania Avenue NW",
+        webpage: "https://st1.fi"
+      },
+      order: {
+        dateTime: `${t.getDate() + "/" + (t.getMonth() + 1) + "/" + t.getFullYear()}  ${t.getHours() + ":" + t.getMinutes()}`,
+        id: "12345ABCDE",
+        method: `${paymentMethod}`
+      },
+      purchasedItems: {
+          name: `${sel.substring(3)}`,
+          price: `${finalAmoutWanted} €`,
+          bonus: `${bonusmessage} €`,
+          total: `${totalwithbonus} €`
+      },
+      currency: "EUR"
+    }
+  }
+  console.log(customerReceipt)
+  document.getElementById("dialog").innerHTML=`
+  <div class="receipt">
+  Receipt <br><br>
+  <span class="l">Store Name:</span>  <span class="r">${customerReceipt.receipt.store.name}</span><br>
+  <span class="l">Adress:</span>  <span class="r">${customerReceipt.receipt.store.address}</span><br>
+  <span class="l">Webpage:</span>  <span class="r">${customerReceipt.receipt.store.webpage}</span><br><br>
+  <span class="l">Purchase info:</span> <br><br>
+  <span class="l">Date and Time:</span>  <span class="r">${customerReceipt.receipt.order.dateTime}</span><br>
+  <span class="l">Purchase Id:</span>  <span class="r">${customerReceipt.receipt.order.id}</span><br>
+  <span class="l">Payment method:</span>  <span class="r">${customerReceipt.receipt.order.method}</span><br><br>
+  <span class="l">purchased items:</span> <br><br>
+  <span class="l">Fule type:</span>  <span class="r">${customerReceipt.receipt.purchasedItems.name}</span><br>
+  <span class="l">Amount:</span>  <span class="r">${(finalAmoutWanted / SelPrice).toFixed(3)}L</span><br>
+  <span class="l">Gas price:</span>  <span class="r">${SelPrice}€/L</span><br>
+  <span class="l">Price:</span>  <span class="r">${customerReceipt.receipt.purchasedItems.price}</span><br>
+  <span class="l">Bonus:</span>  <span class="r">${customerReceipt.receipt.purchasedItems.bonus}</span><br><br>
+  <span class="l">Total:</span>  <span class="r">${customerReceipt.receipt.purchasedItems.total}</span><br><br>
+  <button class="l receipt-button" onclick="document.getElementById('dialog').open = false;">Close receipt</button>
+  </div>
+  `
+  document.getElementById("dialog").open = true;
 }

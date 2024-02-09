@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>
+        <title>Bensa Simulator 2000
         </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,7 @@
     </head>
     <body>
         <container class="container">
-        <div id="cr" class="cr" onclick="cardreader()"></div>
+        <div id="cr" class="cr" onclick="cardreader();"></div>
         <div class="PayScreen">
             <div id="header1" class="header1">01/1/2000</div>
             <div id="header2" class="header2">00:00:00</div>
@@ -44,6 +44,9 @@
             <div onclick="if(gasselectable=='true'){selected=(PriceDiesel);select(sel='SelDiesel')}" id="SelDiesel" class="SelDiesel"></div>
             <div onclick="if(gasselectable=='true'){selected=(PriceMehu);select(sel='SelMehu')}" id="SelMehu" class="SelMehu"></div>
         </div>
+        <dialog class="dialog" id="dialog">
+            Hello, this is a receipt
+        </dialog> 
     </container>
         <script src="main.js" async defer></script>
     </body>
