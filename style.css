@@ -1,318 +1,323 @@
 @font-face {
-  font-family: digital;
-  src: url(fonts/ds-digital/DS-DIGI.TTF);
-}
-body{
-  background-image: url(gallery/st1.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.container{
-  display: grid;
-  gap: 30px;
-  margin: 30px;
-  width: min-content;
-  height: min-content;
-  grid-template-rows: 20cap;
-  grid-template-columns: 45cap;
-  margin-left: 8%;
-  margin-top: 4%;
-}
-.gas-select {
-  background:linear-gradient( to bottom, #bcc6cc, #eee, #bcc6cc);
-  display: grid;
-  border-radius: 5px;
-  width: min-content;
-  height: min-content;
-  grid-column: 1;
-  grid-row: 2 / span 3;
-  margin-bottom: 40%;
-}
-.gas-select > div {
-  margin: 5px;
-  width: 230px;
-  height: 230px;
-}
-.gas-select > div:active {
-  transform: scale(0.98);
-}
-.Sel95 {
-  grid-row: 1;
-  grid-column: 1;
-  background-image: url(gallery/95.png);
-  background-size: contain;
-  border-radius: 10px;
-}
-.Sel98 {
-  grid-row: 1;
-  grid-column: 2;
-  background-image: url(gallery/98.png);
-  background-size: contain;
-  border-radius: 10px;
-}
-.SelDiesel {
-  grid-row: 2;
-  grid-column: 1;
-  background-image: url(gallery/Diesel.png);
-  background-size: contain;
-  border-radius: 10px;
-}
-.SelMehu {
-  grid-row: 2;
-  grid-column: 2;
-  background-image: url(gallery/Mehu.png);
-  background-size: contain;
-  border-radius: 10px;
-}
-.prices {
-  display: grid;
-  width:45cap;
-  height: min-content;
-  background:linear-gradient( to bottom, #bcc6cc, #eee, #bcc6cc);
-  border-radius: 5px;
-  grid-column: 1;
-  grid-row: 1;
-}
-.prices > div {
-  background-color: rgb(32, 32, 32);
-  margin: 5px;
-  text-align: right;
-  font-family: digital;
-  color: #DA3231;
-  text-shadow: 0 0 5px #DA3231, 0 0 10px #DA3231, 0 0 20px #DA3231;
-  font-size: 70px;
-  user-select: none;
-  height: 83px;
-}
-.Price95 {
-  grid-row: 1;
-  grid-column: 1;
-}
-.Price98 {
-  grid-row: 1;
-  grid-column: 2;
-}
-.PriceDiesel {
-  grid-row: 2;
-  grid-column: 1;
-}
-.PriceMehu {
-  grid-row: 2;
-  grid-column: 2;
-}
-.PumpControll {
-  display: grid;
-  background:linear-gradient( to bottom, #bcc6cc, #eee, #bcc6cc);
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  border-radius: 5px;
-  width: min-content;
-  grid-column: 2;
-  grid-row: 1 / span 2;
-}
-.PumpControll > div {
-  user-select: none;
-  margin: 5px;
-  text-align: center;
-  font-size: xx-large;
-  color: #745e5e;
-  width:13cap;
-  border-radius: 10px;
-}
-.Insert {
-  grid-row: 1;
-  background-color: #FF1F31;
-}
-.Pump {
-  grid-row: 2;
-  background-color: #FFE61E;
-}
-.Finish {
-  grid-row: 3;
-  background-color: #B5E61D;
-}
-.Insert:active{
-  background-color: #f11d2f;
-  transform: scale(0.97);
-  color: rgb(231, 231, 231);
-}
-.Pump:active{
-  background-color: #ecd41c;
-  transform: scale(0.97);
-  color: rgb(231, 231, 231);
-}
-.Finish:active{
-  background-color: #a6d41d;
-  transform: scale(0.97);
-  color: rgb(231, 231, 231);
-}
-.PumpInfo {
-  background:linear-gradient( to bottom, #bcc6cc, #eee, #bcc6cc);
-  width: 27cap;
-  height: min-content;
-  grid-column: 2;
-  grid-row: 3;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  border-radius: 5px;
-  user-select: none;
-}
-.PumpInfo1 {
-  font-size: x-large;
-  margin-left: 5px;
-}
-.PumpInfo > div{
-  color: #DA3231;
-  text-shadow: 0 0 5px #DA3231, 0 0 10px #DA3231, 0 0 20px #DA3231;
-}
-.PumpInfo2 {
-  background-color: rgb(32, 32, 32);
-  margin: 5px;
-  text-align: right;
-  font-family: digital;
-  font-size: 70px;
-  width: 390;
-  height: 95px;
-}
-.PumpInfo3 {
-  font-size: x-large;
-  margin-left: 5px;
-}
-.PumpInfo4 {
-  background-color: rgb(32, 32, 32);
-  margin: 5px;
-  text-align: right;
-  font-family: digital;
-  font-size: 70px;
-  width: 390;
-  height: 95px;
-}
-.PayScreen {
-  display: grid;
-  grid-template-columns: 33cap;
-  background-image: linear-gradient(145deg, #FFEC2D, #ffdf2d, #ffa600);
-  border-width: 10px;
-  border-style: solid;
-  border-color: #d7d7d7;
-  width: 65.2cap;
-  height: 285pt;
-  grid-column: 3 / span 2;
-  border-radius: 5px;
-}
-.header1 {
-  grid-row: 1;
-  grid-column: 1;
-  height: 30px;
-  width:29ch;
-  padding-left: 5px;
-  background-color: #2463c9;
-  font-size: x-large;
-  user-select: none;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.header2 {
-  grid-row: 1;
-  grid-column: 2;
-  height: 30px;
-  width:25cn;
-  padding-right: 4px;
-  background-color: #2463c9;
-  font-size: x-large;
-  text-align: end;
-  user-select: none;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.adspace {
-  float: right;
-  height: 350px;
-  width: 170px;
-  margin-left: 521px;
-  background-color: #FE192E;
-  background-image: url(gallery/ad.png);
-  background-repeat: no-repeat;
-  background-size: 150px 330px;
-  background-position: 10px;
-}
-.lansel {
-  text-align: center;
-  font-size: x-large;
-  width: 30cap;
-  margin-top: 6%;
-  grid-column: 1;
-  position:absolute;
-}
-.lan {
-  height: 40px;
-  width: auto;
-}
-.lan {
-  height: 40px;
-  width: auto;
-}
-.lan {
-  height: 40px;
-  width: auto;
-}
-.buttons {
-  margin: 10px;
-  height: 45px;
-  width: 65px;
-  background-color: #ed1b2e;
-  border-color: #980000;
-  border-radius: 10px;
-}
-.cr {
-  background-image: url(gallery/CRE.png);
-  grid-column: 3;
-  grid-row: 3;
-  margin-top: 50px;
-  width: 45cap;
-  height: 27cap;
-  border-radius: 10px;
-}
-.pinput {
-  background-color: #9b7821;
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 3px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  height: 25px;
-}
-.pinputbuttons {
-  width: 65px;
-  height: 40px;
-  margin: 3px;
-  background-color: silver;
-}
-.receipt{
-  font-size: medium;
-  font-family: 'Courier New', Courier, monospace;
-  width: 40cap;
-}
-.l{
-  float: left;
-}
-.r{
-  float: right;
-}
-.dialog{
-  width: 380px;
-  margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 5px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-.receipt-button{
-  border-radius: 3px;
-  background-color: white;
-  color: black; 
-  border: 1px solid #ccc; 
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
+    font-family: digital;
+    src: url(fonts/ds-digital/DS-DIGI.TTF);
+  }
+  body{
+    background-image: url(gallery/st1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 4%;
+  }
+  .gas-select {
+    background:linear-gradient( to bottom, #bcc6cc, #eee, #bcc6cc);
+    display: grid;
+    border-radius: 5px;
+    width: min-content;
+    height: min-content;
+    margin-left: auto;
+    
+  }
+  .gas-select > div {
+    margin: 5px;
+    width: 230px;
+    height: 230px;
+  }
+  .gas-select > div:active {
+    transform: scale(0.98);
+  }
+  .Sel95 {
+    grid-row: 1;
+    grid-column: 1;
+    background-image: url(gallery/95.png);
+    background-size: contain;
+    border-radius: 10px;
+  }
+  .Sel98 {
+    grid-row: 1;
+    grid-column: 2;
+    background-image: url(gallery/98.png);
+    background-size: contain;
+    border-radius: 10px;
+  }
+  .SelDiesel {
+    grid-row: 2;
+    grid-column: 1;
+    background-image: url(gallery/Diesel.png);
+    background-size: contain;
+    border-radius: 10px;
+  }
+  .SelMehu {
+    grid-row: 2;
+    grid-column: 2;
+    background-image: url(gallery/Mehu.png);
+    background-size: contain;
+    border-radius: 10px;
+  }
+  .prices {
+    display: grid;
+    width:min-content;
+    height: min-content;
+    background:linear-gradient( to bottom, #bcc6cc, #eee, #bcc6cc);
+    border-radius: 5px;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .prices > div {
+    background-color: rgb(32, 32, 32);
+    margin: 5px;
+    text-align: right;
+    font-family: digital;
+    color: #DA3231;
+    text-shadow: 0 0 5px #DA3231, 0 0 10px #DA3231, 0 0 20px #DA3231;
+    font-size: 70px;
+    user-select: none;
+    height: 83px;
+    width: 235px;
+  }
+  .Price95 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .Price98 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .PriceDiesel {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .PriceMehu {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .PumpControll {
+    display: grid;
+    background:linear-gradient( to bottom, #bcc6cc, #eee, #bcc6cc);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    border-radius: 5px;
+    width: min-content;
+  }
+  .PumpControll > div {
+    user-select: none;
+    margin: 5px;
+    text-align: center;
+    font-size: xx-large;
+    color: #745e5e;
+    width:13cap;
+    border-radius: 10px;
+  }
+  .Insert {
+    grid-row: 1;
+    background-color: #FF1F31;
+  }
+  .Pump {
+    grid-row: 2;
+    background-color: #FFE61E;
+  }
+  .Finish {
+    grid-row: 3;
+    background-color: #B5E61D;
+  }
+  .Insert:active{
+    background-color: #f11d2f;
+    transform: scale(0.97);
+    color: rgb(231, 231, 231);
+  }
+  .Pump:active{
+    background-color: #ecd41c;
+    transform: scale(0.97);
+    color: rgb(231, 231, 231);
+  }
+  .Finish:active{
+    background-color: #a6d41d;
+    transform: scale(0.97);
+    color: rgb(231, 231, 231);
+  }
+  .PumpInfo {
+    background:linear-gradient( to bottom, #bcc6cc, #eee, #bcc6cc);
+    width: min-content;
+    height: 350px;
+    grid-column: 2;
+    grid-row: 3;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    border-radius: 5px;
+    user-select: none;
+  }
+  .PumpInfo1 {
+    font-size: x-large;
+    margin-left: 5px;
+  }
+  .PumpInfo > div{
+    color: #DA3231;
+    text-shadow: 0 0 5px #DA3231, 0 0 10px #DA3231, 0 0 20px #DA3231;
+    width: 300px;
+  }
+  .PumpInfo2 {
+    background-color: rgb(32, 32, 32);
+    margin: 5px;
+    text-align: right;
+    font-family: digital;
+    font-size: 70px;
+    width: 390;
+    height: 95px;
+  }
+  .PumpInfo3 {
+    font-size: x-large;
+    margin-left: 5px;
+  }
+  .PumpInfo4 {
+    background-color: rgb(32, 32, 32);
+    margin: 5px;
+    text-align: right;
+    font-family: digital;
+    font-size: 70px;
+    width: 390;
+    height: 95px;
+  }
+  .PayScreen {
+    display: grid;
+    grid-template-columns: 33cap;
+    background-image: linear-gradient(145deg, #FFEC2D, #ffdf2d, #ffa600);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #d7d7d7;
+    min-width: 65.2cap;
+    height: 285pt;
+    border-radius: 5px;
+  }
+  .header1 {
+    grid-row: 1;
+    grid-column: 1;
+    height: 30px;
+    width:29ch;
+    padding-left: 5px;
+    background-color: #2463c9;
+    font-size: x-large;
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .header2 {
+    grid-row: 1;
+    grid-column: 2;
+    height: 30px;
+    width:25cn;
+    padding-right: 4px;
+    background-color: #2463c9;
+    font-size: x-large;
+    text-align: end;
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .adspace {
+    float: right;
+    height: 350px;
+    width: 170px;
+    margin-left: 521px;
+    background-color: #FE192E;
+    background-image: url(gallery/ad.png);
+    background-repeat: no-repeat;
+    background-size: 150px 330px;
+    background-position: 10px;
+  }
+  .lansel {
+    text-align: center;
+    font-size: x-large;
+    width: 30cap;
+    margin-top: 6%;
+    grid-column: 1;
+    position:absolute;
+  }
+  .lan {
+    height: 40px;
+    width: auto;
+  }
+  .lan {
+    height: 40px;
+    width: auto;
+  }
+  .lan {
+    height: 40px;
+    width: auto;
+  }
+  .buttons {
+    margin: 10px;
+    height: 45px;
+    width: 65px;
+    background-color: #ed1b2e;
+    border-color: #980000;
+    border-radius: 10px;
+  }
+  .cr {
+    background-image: url(gallery/CRE.png);
+    grid-column: 3;
+    grid-row: 3;
+    width: 45cap;
+    height: 27cap;
+    border-radius: 10px;
+  }
+  .pinput {
+    background-color: #9b7821;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 25px;
+  }
+  .pinputbuttons {
+    width: 65px;
+    height: 40px;
+    margin: 3px;
+    background-color: silver;
+  }
+  .receipt{
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    width: 40cap;
+  }
+  .l{
+    float: left;
+  }
+  .r{
+    float: right;
+  }
+  .dialog{
+    width: 380px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  .receipt-button{
+    border-radius: 3px;
+    background-color: white;
+    color: black; 
+    border: 1px solid #ccc; 
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .column1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .column2{
+    display: flex;
+    flex-direction: column;
+  }
+  .column3{
+    display: flex;
+    flex-direction: column;
+  }

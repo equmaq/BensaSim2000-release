@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Bensa Simulator 2000
-        </title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <style> 
-        </style>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bensa Simulator 2000
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <style> 
+    </style>
+</head>
     <body>
         <container class="container">
-        <div id="cr" class="cr" onclick="cardreader();"></div>
-        <div class="PayScreen">
-            <div id="header1" class="header1">01/1/2000</div>
-            <div id="header2" class="header2">00:00:00</div>
-            <div class="adspace"></div>
-            <div id="lansel" class="lansel">
+            <div class="column1">
+            <div class="prices">
+                <div id="95" class="Price95"></div>
+                <div id="98" class="Price98"></div>
+                <div id="Diesel" class="PriceDiesel"></div>
+                <div id="Mehu" class="PriceMehu"></div>
             </div>
-        </div>
-        <div class="PumpControll">
-            <div id="Insert" class="Insert" onclick="insert()"><p>Insert Pump</p></div>
-            <div id="Pump" class="Pump" ><p>Pump gas</p></div>
-            <div id="Finish" class="Finish" onclick="finish()"><p>Finish</p></div>
-        </div>
-        <div class="PumpInfo">
-            <p class="PumpInfo1">GAS PUMPED(LITERS):</p>
-            <div id="PumpInfo2" class="PumpInfo2">0.000</div>
-            <p class="PumpInfo3">PRICE(€):</p>
-            <div id="PumpInfo4" class="PumpInfo4">0.00</div>    
-        </div>
-        <div class="prices">
-            <div id="95" class="Price95"></div>
-            <div id="98" class="Price98"></div>
-            <div id="Diesel" class="PriceDiesel"></div>
-            <div id="Mehu" class="PriceMehu"></div>
-        </div>
-        <div class="gas-select">
-            <div onclick="if(gasselectable=='true'){selected=(Price95);select(sel='Sel95')}" id="Sel95" class="Sel95"></div>
-            <div onclick="if(gasselectable=='true'){selected=(Price98);select(sel='Sel98')}" id="Sel98" class="Sel98"></div>
-            <div onclick="if(gasselectable=='true'){selected=(PriceDiesel);select(sel='SelDiesel')}" id="SelDiesel" class="SelDiesel"></div>
-            <div onclick="if(gasselectable=='true'){selected=(PriceMehu);select(sel='SelMehu')}" id="SelMehu" class="SelMehu"></div>
-        </div>
+            <div class="gas-select">
+                <div onclick="if(gasselectable=='true'){selected=(Price95);select(sel='Sel95')}" id="Sel95" class="Sel95"></div>
+                <div onclick="if(gasselectable=='true'){selected=(Price98);select(sel='Sel98')}" id="Sel98" class="Sel98"></div>
+                <div onclick="if(gasselectable=='true'){selected=(PriceDiesel);select(sel='SelDiesel')}" id="SelDiesel" class="SelDiesel"></div>
+                <div onclick="if(gasselectable=='true'){selected=(PriceMehu);select(sel='SelMehu')}" id="SelMehu" class="SelMehu"></div>
+            </div>
+            </div>
+            <div class="column1">
+            <div class="PumpControll">
+                <div id="Insert" class="Insert" onclick="insert()"><p>Insert Pump</p></div>
+                <div id="Pump" class="Pump" ><p>Pump gas</p></div>
+                <div id="Finish" class="Finish" onclick="finish()"><p>Finish</p></div>
+            </div>
+            <div class="PumpInfo">
+                <p class="PumpInfo1">GAS PUMPED(LITERS):</p>
+                <div id="PumpInfo2" class="PumpInfo2">0.000</div>
+                <p class="PumpInfo3">PRICE(€):</p>
+                <div id="PumpInfo4" class="PumpInfo4">0.00</div>    
+            </div>
+            </div>
+            <div class="column1">
+            <div class="PayScreen">
+                <div id="header1" class="header1">01/1/2000</div>
+                <div id="header2" class="header2">00:00:00</div>
+                <div class="adspace"></div>
+                <div id="lansel" class="lansel">
+                </div>
+            </div>
+            <div id="cr" class="cr" onclick="cardreader();"></div>
+            </div>
+
         <dialog class="dialog" id="dialog">
             Hello, this is a receipt
         </dialog> 
